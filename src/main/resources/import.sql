@@ -1,0 +1,28 @@
+INSERT INTO tipo_inventario (id, tipo_inventario) VALUES (1, "Maquinaria Pesada");
+INSERT INTO tipo_inventario (id, tipo_inventario) VALUES (2, "Telares");
+INSERT INTO tipo_inventario (id, tipo_inventario) VALUES (3, "Imprentas");
+INSERT INTO tipo_inventario (id, tipo_inventario) VALUES (4, "Molinillo");
+INSERT INTO tipo_inventario (id, tipo_inventario) VALUES (5, "Cosedoras");
+INSERT INTO sucursal (id, direccion, nombre_sucursal, telefono) VALUES (1, "calle 3  3-99", "Sucursal Versalles Bogota", "111111");
+INSERT INTO sucursal (id, direccion, nombre_sucursal, telefono) VALUES (2, "Kra 4  5-39", "Sucursal Pinares Cali", "1726381");
+INSERT INTO sucursal (id, direccion, nombre_sucursal, telefono) VALUES (3, "Diagonal 5  33-29", "Sucursal Salitre Pereira", "666666");
+INSERT INTO sucursal (id, direccion, nombre_sucursal, telefono) VALUES (4, "Transversal 7  14-95", "Sucursal Centro Medellin", "44444");
+INSERT INTO sucursal (id, direccion, nombre_sucursal, telefono) VALUES (5, "Autopista 9  38-93", "Sucursal Occidental Barranca", "33333");
+INSERT INTO sucursal (id, direccion, nombre_sucursal, telefono) VALUES (6, "calle 31  57-19", "Sucursal Barranquilla", "222222");
+INSERT cargo (id, nombre_cargo) VALUES (1, "Gerente");
+INSERT cargo (id, nombre_cargo) VALUES (2, "Cajero");
+INSERT cargo (id, nombre_cargo) VALUES (3, "Secretaria");
+INSERT cargo (id, nombre_cargo) VALUES (4, "Todero"); 
+INSERT cargo (id, nombre_cargo) VALUES (5, "Desarrollador");
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (1, "Garcia", "1069752365", "foxone4@gmail.com", "Julian", 2, 1);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (2, "Lagos", "39654123", "lagos@gmail.com", "Andrea", 1, 1);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (3, "Ramos", "1456974", "ramos99@gmail.com", "Guillo", 2, 2);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (4, "Castro", "123577", "lucia12@gmail.com", "Lucia", 2, 2);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (5, "Perduz", "45679812", "angie33@gmail.com", "Angie", 2, 2);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (6, "Loma", "16497325", "loma321@gmail.com", "Alejandro", 2, 3);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES(7, "Ramirez", "96485236", "ricardo091@gmail.com", "Ricardo", 3, 3);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (8, "Lazo", "64985631", "Leonardo11@gmail.com", "Leo", 3, 3);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (9, "Castaneda", "44569852", "lucastaneada2@gmail.com", "Lucas", 3, 4);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (10, "Perea", "77963214", "perea44@gmail.com", "Amaranto", 4, 4);
+INSERT INTO empleado (id, apellido, cedula, correo_electronico, nombre, id_cargo, id_sucursal) VALUES (11, "Specter", "11133654", "ninol@gmail.com", "Nino", 5, 4);
+
