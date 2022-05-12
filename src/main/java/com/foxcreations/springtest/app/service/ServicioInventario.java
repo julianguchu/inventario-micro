@@ -157,6 +157,27 @@ public class ServicioInventario {
 		}
 		
 	
+		
+public List<DtoResponseInventarioDisponible> ReporteDisponibilidadMesEspecificoSucursal(LocalDate inicio , LocalDate finalmes, Integer sucursalid) throws ExcepcionNoDisponibilidadInventario, ExcepcionNoSucursalFound {
+			
+			Optional<Sucursal>sucursalBuscada= repoSucursal.findById(sucursalid);
+			
+			if(!(sucursalBuscada.isPresent())) {
+				
+				throw new ExcepcionNoSucursalFound("sucursal inexistente");
+			}
+			List<DtoResponseInventarioDisponible>  listaDisponibilidadInventario=repositorioInventario.getInventarioPorMesComprado(inicio, finalmes,sucursalid);
+			
+					if(listaDisponibilidadInventario.isEmpty()) {
+						
+						throw new ExcepcionNoDisponibilidadInventario("no hay disponibilidad de maquinaria en el inventario para esta sucursal en el mes "+ inicio.getMonthValue());
+						
+						
+					}
+			return listaDisponibilidadInventario ;
+			
+		}
+		
 	
 	
 	

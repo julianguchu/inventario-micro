@@ -17,12 +17,13 @@ import com.foxcreations.springtest.app.model.Inventario;
 public interface RepositorioInventario extends CrudRepository<Inventario, Integer> {
 	
 	
-	@Query("SELECT i.id, i.descripcionMaquina ,i.marca, i.modelo   FROM  "
+	@Query(" SELECT new com.foxcreations.springtest.app.dto.DtoResponseInventarioDisponible(i.id, i.descripcionMaquina ,i.marca, i.modelo , i.valorUnitario, i.estadoUso ,i.tipoInventario.descripcionTipo ,i.sucursal.id,  i.sucursal.nombreSucursal)  "
+			+ " FROM  "
 			+ "Inventario  i  WHERE    i.fechaCompra BETWEEN :inicio AND :finalmes "
 			+ " AND " +"("
-			+ "i.fechaVenta IS NULL OR i.fechaVenta  NOT BETWEEN  :inicio AND :finalmes" +")")
+			+ "i.fechaVenta IS NULL OR i.fechaVenta > :finalmes" +") AND   i.sucursal.id = :idSucursalRequerida")
 			
-	public List<Inventario> getInventarioPorMes(@Param("inicio") LocalDate inicio, @Param("finalmes") LocalDate finalmes);
+	public List<DtoResponseInventarioDisponible> getInventarioPorMesComprado(@Param("inicio") LocalDate inicio, @Param("finalmes") LocalDate finalmes, @Param("idSucursalRequerida") Integer idSucursal);
 	
 	
 	@Query("SELECT new com.foxcreations.springtest.app.dto.DtoResponseInventarioDisponible(i.id, i.descripcionMaquina ,i.marca, i.modelo , i.valorUnitario, i.estadoUso ,i.tipoInventario.descripcionTipo , i.sucursal.id, i.sucursal.nombreSucursal) FROM  "
